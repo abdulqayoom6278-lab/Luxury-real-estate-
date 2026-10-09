@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Estates | Luxury & Premium Real Estate</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font - Playfair Display & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#112240',
+                            900: '#0B192C',
+                            950: '#060D17',
+                        },
+                        gold: {
+                            400: '#F3E5AB',
+                            500: '#D4AF37',
+                            600: '#AA820A',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA820A 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-bg-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #AA820A 100%);
+        }
+        .gold-border-glow {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+        .glass-panel {
+            background: rgba(11, 25, 44, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col selection:bg-gold-500 selection:text-navy-900">
+
+    <header class="sticky top-0 z-50 glass-panel border-b border-gold-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#home" class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg gold-bg-gradient flex items-center justify-center text-navy-950 font-serif font-extrabold text-xl shadow-lg">
+                        A
+                    </div>
+                    <div>
+                        <span class="font-serif font-extrabold text-2xl tracking-widest text-white">APEX</span>
+                        <span class="block text-[10px] uppercase tracking-[0.3em] gold-gradient-text font-semibold">ESTATES</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-wider font-medium">
+                    <a href="#home" class="hover:text-gold-500 transition">Home</a>
+                    <a href="#properties" class="hover:text-gold-500 transition">Properties</a>
+                    <a href="#calculator" class="hover:text-gold-500 transition">Mortgage Calc</a>
+                    <a href="#about" class="hover:text-gold-500 transition">Why Us</a>
+                    <a href="#contact" class="hover:text-gold-500 transition">Inquiry</a>
+                </nav>
+
+                <!-- Header CTA Button -->
+                <div class="hidden sm:flex items-center">
+                    <a href="#contact" class="gold-bg-gradient text-navy-950 font-semibold px-5 py-2.5 rounded-lg hover:brightness-110 transition shadow-md">
+                        Book Consultation
+                    </a>
+                </div>
+
+                <!-- Mobile Navigation Toggle -->
+                <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="md:hidden p-2 rounded-lg text-slate-300 hover:text-gold-500">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Container -->
+        <div id="mobileMenu" class="hidden md:hidden bg-navy-900 border-b border-gold-500/20 px-4 pt-3 pb-6 space-y-3">
+            <a href="#home" class="block py-2 text-slate-200 hover:text-gold-500">Home</a>
+            <a href="#properties" class="block py-2 text-slate-200 hover:text-gold-500">Properties</a>
+            <a href="#calculator" class="block py-2 text-slate-200 hover:text-gold-500">Mortgage Calc</a>
+            <a href="#about" class="block py-2 text-slate-200 hover:text-gold-500">Why Us</a>
+            <a href="#contact" class="block py-2 text-slate-200 hover:text-gold-500">Inquiry</a>
+            <a href="#contact" class="block w-full text-center gold-bg-gradient text-navy-950 font-semibold py-2.5 rounded-lg">Book Consultation</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section id="home" class="relative min-h-[85vh] flex items-center justify-center bg-cover bg-center py-20 px-4" style="background-image: linear-gradient(to bottom, rgba(11, 25, 44, 0.75), rgba(6, 13, 23, 0.95)), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80');">
+            <div class="max-w-5xl mx-auto text-center relative z-10 w-full">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs uppercase tracking-widest font-semibold mb-6">
+                    Luxury Real Estate Experience
+                </span>
+                <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
+                    Find Your Extraordinary <br class="hidden sm:inline"><span class="gold-gradient-text">Dream Sanctuary</span>
+                </h1>
+                <p class="mt-6 text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
+                    Discover handpicked ultra-luxury villas, contemporary penthouses, and high-yielding commercial properties.
+                </p>
+
+                <!-- Property Search Bar Overlay -->
+                <div class="mt-12 glass-panel p-6 rounded-2xl shadow-2xl text-left border border-gold-500/30">
+                    <form id="heroSearchForm" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <!-- Search Location -->
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider font-semibold text-slate-400 mb-1.5"><i class="fas fa-location-dot text-gold-500 mr-1.5"></i> Location</label>
+                            <select id="searchLocation" class="w-full bg-navy-900 border border-slate-700 rounded-lg py-2.5 px-3 text-white focus:outline-none focus:border-gold-500">
+                                <option value="">All Locations</option>
+                                <option value="Beverly Hills">Beverly Hills</option>
+                                <option value="Miami Beach">Miami Beach</option>
+                                <option value="Manhattan">Manhattan</option>
+                                <option value="Aspen">Aspen</option>
+                            </select>
+                        </div>
+
+                        <!-- Property Type -->
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider font-semibold text-slate-400 mb-1.5"><i class="fas fa-house-chimney text-gold-500 mr-1.5"></i> Property Type</label>
+                            <select id="searchType" class="w-full bg-navy-900 border border-slate-700 rounded-lg py-2.5 px-3 text-white focus:outline-none focus:border-gold-500">
+                                <option value="">All Types</option>
+                                <option value="Villa">Luxury Villa</option>
+                                <option value="Penthouse">Penthouse</option>
+                                <option value="Commercial">Commercial</option>
+                            </select>
+                        </div>
+
+                        <!-- Bedrooms -->
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider font-semibold text-slate-400 mb-1.5"><i class="fas fa-bed text-gold-500 mr-1.5"></i> Bedrooms</label>
+                            <select id="searchBeds" class="w-full bg-navy-900 border border-slate-700 rounded-lg py-2.5 px-3 text-white focus:outline-none focus:border-gold-500">
+                                <option value="">Any Beds</option>
+                                <option value="3">3+ Bedrooms</option>
+                                <option value="4">4+ Bedrooms</option>
+                                <option value="5">5+ Bedrooms</option>
+                            </select>
+                        </div>
+
+                        <!-- Submit Search Button -->
+                        <div class="flex items-end">
+                            <button type="submit" class="w-full gold-bg-gradient text-navy-950 font-bold py-2.5 px-4 rounded-lg hover:brightness-110 transition flex items-center justify-center gap-2">
+                                <i class="fas fa-magnifying-glass"></i> Search Properties
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="properties" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-gold-500 font-semibold uppercase tracking-widest text-xs">Curated Selection</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white mt-2">Featured Listings</h2>
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="mt-6 md:mt-0 flex flex-wrap gap-2">
+                    <button class="prop-filter-btn px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-lg gold-bg-gradient text-navy-950" data-filter="all">All</button>
+                    <button class="prop-filter-btn px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-lg bg-navy-900 text-slate-300 border border-slate-800 hover:border-gold-500" data-filter="Villa">Villas</button>
+                    <button class="prop-filter-btn px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-lg bg-navy-900 text-slate-300 border border-slate-800 hover:border-gold-500" data-filter="Penthouse">Penthouses</button>
+                    <button class="prop-filter-btn px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-lg bg-navy-900 text-slate-300 border border-slate-800 hover:border-gold-500" data-filter="Commercial">Commercial</button>
+                </div>
+            </div>
+
+            <!-- Property Cards Grid -->
+            <div id="propertiesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dynamically populated or rendered items -->
+            </div>
+        </section>
+
+        <section id="calculator" class="py-20 bg-navy-900/60 border-y border-gold-500/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <!-- Left Info -->
+                    <div class="lg:col-span-5">
+                        <span class="text-gold-500 uppercase tracking-widest text-xs font-semibold">Financial Planning</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">Mortgage Payment Calculator</h2>
+                        <p class="mt-4 text-slate-400 leading-relaxed font-light">
+                            Calculate your estimated monthly payment quickly and easily with our real estate financing tool. Plan your luxury property acquisition with transparency.
+                        </p>
+                        
+                        <!-- Result Display Box -->
+                        <div class="mt-8 p-6 bg-navy-950 rounded-2xl border border-gold-500/30">
+                            <span class="text-slate-400 text-sm">Estimated Monthly Payment</span>
+                            <div class="text-4xl font-serif font-bold text-gold-400 mt-2" id="monthlyResult">$20,224</div>
+                            <p class="text-xs text-slate-500 mt-2">*Principal, interest, and estimations excluded of taxes/insurance.</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Controls -->
+                    <div class="lg:col-span-7 bg-navy-950 p-8 rounded-2xl border border-slate-800">
+                        <div class="space-y-6">
+                            <!-- Home Price Range -->
+                            <div>
+                                <div class="flex justify-between text-sm mb-2">
+                                    <label class="text-slate-300">Home Price ($)</label>
+                                    <span class="font-bold text-gold-400" id="valHomePrice">$4,500,000</span>
+                                </div>
+                                <input type="range" id="inputHomePrice" min="500000" max="20000000" step="100000" value="4500000" class="w-full accent-gold-500 cursor-pointer">
+                            </div>
+
+                            <!-- Down Payment Range -->
+                            <div>
+                                <div class="flex justify-between text-sm mb-2">
+                                    <label class="text-slate-300">Down Payment ($)</label>
+                                    <span class="font-bold text-gold-400" id="valDownPayment">$900,000 (20%)</span>
+                                </div>
+                                <input type="range" id="inputDownPayment" min="50000" max="5000000" step="50000" value="900000" class="w-full accent-gold-500 cursor-pointer">
+                            </div>
+
+                            <!-- Interest Rate Range -->
+                            <div>
+                                <div class="flex justify-between text-sm mb-2">
+                                    <label class="text-slate-300">Interest Rate (%)</label>
+                                    <span class="font-bold text-gold-400" id="valInterestRate">5.5%</span>
+                                </div>
+                                <input type="range" id="inputInterestRate" min="2.0" max="12.0" step="0.1" value="5.5" class="w-full accent-gold-500 cursor-pointer">
+                            </div>
+
+                            <!-- Loan Term -->
+                            <div>
+                                <label class="block text-sm text-slate-300 mb-2">Loan Term (Years)</label>
+                                <select id="inputLoanTerm" class="w-full bg-navy-900 border border-slate-800 rounded-lg p-3 text-white focus:outline-none focus:border-gold-500">
+                                    <option value="15">15 Years Fixed</option>
+                                    <option value="30" selected>30 Years Fixed</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-500 uppercase tracking-widest text-xs font-semibold">Excellence & Trust</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white mt-2">Why Discerning Clients Choose Apex</h2>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+                <div class="p-6 bg-navy-900 rounded-2xl border border-slate-800 text-center">
+                    <div class="text-3xl sm:text-4xl font-serif font-extrabold gold-gradient-text">$3.8B+</div>
+                    <div class="text-xs uppercase tracking-wider text-slate-400 mt-2">Total Sales Volume</div>
+                </div>
+                <div class="p-6 bg-navy-900 rounded-2xl border border-slate-800 text-center">
+                    <div class="text-3xl sm:text-4xl font-serif font-extrabold gold-gradient-text">1,250+</div>
+                    <div class="text-xs uppercase tracking-wider text-slate-400 mt-2">Luxury Deals Closed</div>
+                </div>
+                <div class="p-6 bg-navy-900 rounded-2xl border border-slate-800 text-center">
+                    <div class="text-3xl sm:text-4xl font-serif font-extrabold gold-gradient-text">99.4%</div>
+                    <div class="text-xs uppercase tracking-wider text-slate-400 mt-2">Client Satisfaction</div>
+                </div>
+                <div class="p-6 bg-navy-900 rounded-2xl border border-slate-800 text-center">
+                    <div class="text-3xl sm:text-4xl font-serif font-extrabold gold-gradient-text">18+</div>
+                    <div class="text-xs uppercase tracking-wider text-slate-400 mt-2">Years Of Prestige</div>
+                </div>
+            </div>
+
+            <!-- Value Pillars -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 bg-navy-900 rounded-2xl border border-slate-800/80 hover:border-gold-500/50 transition">
+                    <div class="w-12 h-12 gold-bg-gradient rounded-xl flex items-center justify-center text-navy-950 text-xl font-bold mb-6">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Confidential Advisory</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Absolute discretion for high-net-worth individuals, celebrities, and institutional investors worldwide.</p>
+                </div>
+
+                <div class="p-8 bg-navy-900 rounded-2xl border border-slate-800/80 hover:border-gold-500/50 transition">
+                    <div class="w-12 h-12 gold-bg-gradient rounded-xl flex items-center justify-center text-navy-950 text-xl font-bold mb-6">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Exclusive Listings</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Direct access to off-market luxury estates, private islands, and architectural masterpieces before public release.</p>
+                </div>
+
+                <div class="p-8 bg-navy-900 rounded-2xl border border-slate-800/80 hover:border-gold-500/50 transition">
+                    <div class="w-12 h-12 gold-bg-gradient rounded-xl flex items-center justify-center text-navy-950 text-xl font-bold mb-6">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Market Intelligence</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Comprehensive algorithmic valuations and micro-market insights ensuring maximum ROI on acquisition.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 bg-navy-900/40 border-t border-gold-500/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Left Info -->
+                    <div>
+                        <span class="text-gold-500 uppercase tracking-widest text-xs font-semibold">Private Consultation</span>
+                        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white mt-2">Schedule A Private Viewing</h2>
+                        <p class="mt-4 text-slate-400 leading-relaxed font-light">
+                            Our team of dedicated senior estate advisors is at your service. Contact us to arrange a private viewing or request a confidential property strategy session.
+                        </p>
+
+                        <div class="mt-8 space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-navy-900 border border-slate-800 flex items-center justify-center text-gold-400">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-slate-500">Direct Line</div>
+                                    <div class="text-white font-medium">+1 (800) 555-APEX</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-navy-900 border border-slate-800 flex items-center justify-center text-gold-400">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-slate-500">Inquiries</div>
+                                    <div class="text-white font-medium">vip@apexestates.com</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="bg-navy-950 p-8 rounded-2xl border border-gold-500/30">
+                        <form id="inquiryForm" class="space-y-4">
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-slate-400 mb-1">Full Name *</label>
+                                <input type="text" required class="w-full bg-navy-900 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-500">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs uppercase tracking-wider text-slate-400 mb-1">Email *</label>
+                                    <input type="email" required class="w-full bg-navy-900 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-500">
+                                </div>
+                                <div>
+                                    <label class="block text-xs uppercase tracking-wider text-slate-400 mb-1">Phone *</label>
+                                    <input type="tel" required class="w-full bg-navy-900 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-500">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs uppercase tracking-wider text-slate-400 mb-1">Property Interest</label>
+                                    <select class="w-full bg-navy-900 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-500">
+                                        <option>Luxury Villa</option>
+                                        <option>Penthouse</option>
+                                        <option>Commercial Property</option>
+                                        <option>General Advisory</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs uppercase tracking-wider text-slate-400 mb-1">Preferred Contact Time</label>
+                                    <select class="w-full bg-navy-900 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-500">
+                                        <option>Morning (9 AM - 12 PM)</option>
+                                        <option>Afternoon (12 PM - 5 PM)</option>
+                                        <option>Evening (5 PM - 8 PM)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-slate-400 mb-1">Message / Special Requests</label>
+                                <textarea rows="4" class="w-full bg-navy-900 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-500" placeholder="Please specify location preferences or budget constraints..."></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full gold-bg-gradient text-navy-950 font-bold py-3.5 rounded-lg hover:brightness-110 transition shadow-lg">
+                                Send Private Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Property Details Modal -->
+    <div id="propertyModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-navy-950 border border-gold-500/30 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 relative">
+            <button id="closeModalBtn" aria-label="Close Property Details Modal" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="modalContent">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-navy-950 border-t border-slate-800/80 py-12 text-slate-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded gold-bg-gradient flex items-center justify-center text-navy-950 font-serif font-bold text-sm">
+                    A
+                </div>
+                <span class="font-serif text-white font-bold tracking-widest">APEX ESTATES</span>
+            </div>
+            <p>&copy; 2026 Apex Estates International LLC. All Rights Reserved.</p>
+            <div class="flex space-x-6 text-slate-400">
+                <a href="#" class="hover:text-gold-500"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-gold-500"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="hover:text-gold-500"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sample Property Database
+        const properties = [
+            {
+                id: 1,
+                title: "The Solstice Oceanfront Villa",
+                type: "Villa",
+                location: "Miami Beach",
+                price: 12500000,
+                priceFormatted: "$12,500,000",
+                beds: 6,
+                baths: 8,
+                sqft: "10,200",
+                tag: "Featured",
+                image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80",
+                description: "Panoramic ocean view estate featuring an infinity pool, private dock, and state-of-the-art smart automation."
+            },
+            {
+                id: 2,
+                title: "Skyline Crown Penthouse",
+                type: "Penthouse",
+                location: "Manhattan",
+                price: 18900000,
+                priceFormatted: "$18,900,000",
+                beds: 4,
+                baths: 5,
+                sqft: "6,800",
+                tag: "Exclusive",
+                image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
+                description: "360-degree skyline views of Manhattan with private wrap-around terrace and dedicated concierge services."
+            },
+            {
+                id: 3,
+                title: "Beverly Hills Contemporary Estate",
+                type: "Villa",
+                location: "Beverly Hills",
+                price: 24000000,
+                priceFormatted: "$24,000,000",
+                beds: 7,
+                baths: 9,
+                sqft: "14,500",
+                tag: "Hot Deal",
+                image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+                description: "Architectural masterpiece with wine cellar, private screening room, tennis court, and guest house."
+            },
+            {
+                id: 4,
+                title: "Alpine Sanctuary Chalet",
+                type: "Villa",
+                location: "Aspen",
+                price: 9800000,
+                priceFormatted: "$9,800,000",
+                beds: 5,
+                baths: 6,
+                sqft: "7,400",
+                tag: "Featured",
+                image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80",
+                description: "Ski-in/ski-out luxury chalet built with timber and modern stone finishes."
+            },
+            {
+                id: 5,
+                title: "Financial Plaza Commercial Tower",
+                type: "Commercial",
+                location: "Manhattan",
+                price: 45000000,
+                priceFormatted: "$45,000,000",
+                beds: 0,
+                baths: 12,
+                sqft: "32,000",
+                tag: "Investment",
+                image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+                description: "Prime AAA office tower fully leased with high cap rate and corporate anchor tenants."
+            },
+            {
+                id: 6,
+                title: "Biscayne Bay Modern Residence",
+                type: "Penthouse",
+                location: "Miami Beach",
+                price: 8200000,
+                priceFormatted: "$8,200,000",
+                beds: 3,
+                baths: 4,
+                sqft: "4,500",
+                tag: "New",
+                image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
+                description: "Floor-to-ceiling glass design with private rooftop plunge pool and direct marina access."
+            }
+        ];
+
+        // Render Property Cards Function
+        function renderProperties(list) {
+            const grid = document.getElementById('propertiesGrid');
+            grid.innerHTML = '';
+
+            if (list.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-12 text-slate-400">No properties matched your search query.</div>`;
+                return;
+            }
+
+            list.forEach(prop => {
+                const card = document.createElement('div');
+                card.className = "bg-navy-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-gold-500/50 transition group flex flex-col";
+                card.innerHTML = `
+                    <div class="relative overflow-hidden h-64">
+                        <img src="${prop.image}" alt="${prop.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold gold-bg-gradient text-navy-950">${prop.tag}</span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs uppercase tracking-wider text-gold-400 font-semibold">${prop.type} • ${prop.location}</div>
+                            <h3 class="text-xl font-bold text-white mt-1 group-hover:text-gold-400 transition">${prop.title}</h3>
+                            <div class="text-2xl font-serif font-bold text-white mt-3">${prop.priceFormatted}</div>
+                            
+                            <div class="grid grid-cols-3 gap-2 border-y border-slate-800 py-3 my-4 text-xs text-slate-400">
+                                <div><i class="fas fa-bed text-gold-500 mr-1"></i> ${prop.beds > 0 ? prop.beds + ' Beds' : 'N/A'}</div>
+                                <div><i class="fas fa-bath text-gold-500 mr-1"></i> ${prop.baths} Baths</div>
+                                <div><i class="fas fa-vector-square text-gold-500 mr-1"></i> ${prop.sqft} sqft</div>
+                            </div>
+                        </div>
+                        <button onclick="openModal(${prop.id})" class="w-full py-2.5 bg-navy-950 hover:bg-gold-500 hover:text-navy-950 border border-slate-800 text-slate-200 text-xs uppercase tracking-wider font-semibold rounded-lg transition">
+                            View Details
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Initialize Property Grid
+        renderProperties(properties);
+
+        // Filter Properties by Tab
+        const filterBtns = document.querySelectorAll('.prop-filter-btn');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.className = "prop-filter-btn px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-lg bg-navy-900 text-slate-300 border border-slate-800 hover:border-gold-500";
+                });
+                btn.className = "prop-filter-btn px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-lg gold-bg-gradient text-navy-950";
+
+                const filter = btn.dataset.filter;
+                if (filter === 'all') {
+                    renderProperties(properties);
+                } else {
+                    renderProperties(properties.filter(p => p.type === filter));
+                }
+            });
+        });
+
+        // Search Form Filter Logic
+        document.getElementById('heroSearchForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const loc = document.getElementById('searchLocation').value;
+            const type = document.getElementById('searchType').value;
+            const beds = document.getElementById('searchBeds').value;
+
+            let filtered = properties;
+            if (loc) filtered = filtered.filter(p => p.location === loc);
+            if (type) filtered = filtered.filter(p => p.type === type);
+            if (beds) filtered = filtered.filter(p => p.beds >= parseInt(beds));
+
+            renderProperties(filtered);
+            document.getElementById('properties').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Mortgage Calculator Logic
+        function calculateMortgage() {
+            const homePrice = parseFloat(document.getElementById('inputHomePrice').value);
+            const downPayment = parseFloat(document.getElementById('inputDownPayment').value);
+            const interestRate = parseFloat(document.getElementById('inputInterestRate').value) / 100 / 12;
+            const loanTerm = parseInt(document.getElementById('inputLoanTerm').value) * 12;
+
+            document.getElementById('valHomePrice').innerText = '$' + homePrice.toLocaleString();
+            document.getElementById('valDownPayment').innerText = '$' + downPayment.toLocaleString() + ` (${Math.round((downPayment/homePrice)*100)}%)`;
+            document.getElementById('valInterestRate').innerText = (parseFloat(document.getElementById('inputInterestRate').value)).toFixed(1) + '%';
+
+            const principal = homePrice - downPayment;
+            let monthly = 0;
+
+            if (principal > 0 && interestRate > 0) {
+                monthly = (principal * interestRate * Math.pow(1 + interestRate, loanTerm)) / (Math.pow(1 + interestRate, loanTerm) - 1);
+            }
+
+            document.getElementById('monthlyResult').innerText = '$' + Math.round(monthly).toLocaleString();
+        }
+
+        ['inputHomePrice', 'inputDownPayment', 'inputInterestRate', 'inputLoanTerm'].forEach(id => {
+            document.getElementById(id).addEventListener('input', calculateMortgage);
+        });
+
+        calculateMortgage();
+
+        // Property Modal Controller
+        const modal = document.getElementById('propertyModal');
+        const modalContent = document.getElementById('modalContent');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+
+        function openModal(id) {
+            const prop = properties.find(p => p.id === id);
+            if (!prop) return;
+
+            modalContent.innerHTML = `
+                <img src="${prop.image}" alt="${prop.title}" class="w-full h-72 object-cover rounded-xl mb-6">
+                <span class="text-xs uppercase font-semibold text-gold-400">${prop.type} • ${prop.location}</span>
+                <h3 class="text-2xl font-serif font-bold text-white mt-1">${prop.title}</h3>
+                <div class="text-3xl font-serif font-bold text-gold-400 mt-2 mb-4">${prop.priceFormatted}</div>
+                <p class="text-slate-300 text-sm leading-relaxed mb-6">${prop.description}</p>
+                <a href="#contact" onclick="closeModal()" class="block w-full text-center gold-bg-gradient text-navy-950 font-bold py-3 rounded-lg">Inquire About This Property</a>
+            `;
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+        }
+
+        closeModalBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        // Mobile Menu Toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+
+        // Contact Form Submission Mock
+        document.getElementById('inquiryForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for contacting Apex Estates. A senior advisor will reach out to you within 2 hours.');
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
